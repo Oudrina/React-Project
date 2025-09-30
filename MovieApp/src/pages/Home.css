@@ -1,0 +1,14 @@
+.movie-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+img{
+    height: 300px;
+    object-fit: cover;
+}
+.movie-container{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    width: 200px;
+    padding: .3em;
+    margin-top: 1em;
+}

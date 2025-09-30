@@ -1,0 +1,72 @@
+.add-product-main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+
+}
+.add-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    padding: 1em;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+
+.product-name input, .product-name-description input ,.product-price input ,.product-stockQuantity input{
+    border: 1px solid grey;
+    margin-bottom: 1.5em;
+    padding: .5em;
+    width: 95%;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1em;
+}
+.product-name-description textarea{
+    width: 97%;
+    outline: none;
+    
+    resize: none;
+word-wrap: break-word;
+  
+}
+
+.releasedDate input{
+    padding: .2em;
+    /* width: 260px; */
+}
+
+.date-image-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+.price-stockQuantity-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    width: 97%;
+    margin-bottom: 1em;
+}
+
+button{
+    padding: .7em;
+    border: none;
+    background-color: teal;
+    color: white;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}

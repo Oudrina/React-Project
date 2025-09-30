@@ -1,0 +1,49 @@
+
+.order-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.orders{
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+        padding: 1em;
+
+}
+
+.order-detail{
+    width: 70%;
+    display: flex;
+   
+    justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+}
+
+.order-container h4{
+ font-size: 1.5rem;
+}
+
+.orders-available{
+  width: 70%; 
+}
+.product-order-page{
+    display: flex;
+    
+
+
+}
+.product-order-page img{
+    height: 150px;
+    border-radius: 5px;
+}
+
+.order-date {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.order-id span{
+    font-size: .8remrem;
+
+}

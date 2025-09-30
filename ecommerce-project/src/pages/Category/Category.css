@@ -1,0 +1,12 @@
+.category-container{
+    display:  flex;
+      justify-content: flex-start;
+      align-items: center;
+      align-content: flex-start;
+      margin-left: 1em;
+      font-size: .9rem;
+}
+
+.category-list{
+    margin-left: .4em;
+}
