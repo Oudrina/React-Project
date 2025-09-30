@@ -14,9 +14,10 @@ function Appointments(){
    navigate("/editAppointment/" + id)
   }
   const deleteAppointment = (id) => {
+    console.log(` ${process.env.REACT_APP_API_URL}`)
     const appointmentDelete = async () => {
       if (window.confirm("Do you want to delete this data")) {
-        const response = await axios.delete('http://localhost:8082/removeAppointment/' + id)
+        const response = await axios.delete(`/removeAppointment/` + id)
         console.log("Appointment deleted successfully",response.data )
       }
       window.location.reload()
