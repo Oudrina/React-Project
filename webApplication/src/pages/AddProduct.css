@@ -1,0 +1,45 @@
+.form-wrapper{
+    max-width: 300px;
+    margin: 0 auto;
+     margin-top: 3em;
+     box-shadow: 0px 0px 16px rgba(0, 0, 0,0.3);
+     flex-direction: column;
+     border-radius: 5px;
+     
+     /* border: 1px solid ghostwhite; */
+
+}
+
+.form-wrapper input {
+    width: 100%;
+    padding: .4em;
+    border-radius: 3px;
+    background-color: ghostwhite;
+    outline: none;
+}
+.form-wrapper h6{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+}
+form >div{
+    margin-bottom: 1em;
+}
+form{
+    padding: .5em;
+}
+.form-wrapper label{
+    font-size: .8rem;
+}
+
+button{
+    background-color: orangered;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.errMsg{
+    font-size: .6rem;
+    color: red;
+}

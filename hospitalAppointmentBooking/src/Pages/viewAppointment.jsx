@@ -2,16 +2,16 @@ import { Link, useParams } from 'react-router'
 import './viewAppointment.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-function ViewAppointment(){
+function ViewAppointment( ){
+    const [studentData ,setStudentData] = useState({})
   const {id} = useParams()
-  const [studentData , setStudentData] = useState({})
     console.log(id)
 
      useEffect(()=>{
             const viewDetailsById = async () =>{
             const response = await axios.get('http://localhost:8082/appointment/' + id) 
-           setStudentData(response.data)
-            } 
+             setStudentData(response.data)
+        } 
       viewDetailsById()
      },[id])
    

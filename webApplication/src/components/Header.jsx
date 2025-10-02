@@ -1,16 +1,27 @@
 import './Header.css'
 import 'boxicons/css/boxicons.min.css';
-import { BiSearchAlt2 } from 'react-icons/bi'
-function Header(){
+import { useState } from 'react';
+import { Link } from 'react-router';
+function Header({count}){
+    const [search,setSearch] = useState('')
+    console.log(search)
+   
+
     return(
         <>
         <div className="header-wrapper">
-            <h3>Ecommerce</h3>
+            <Link to={'/'}>
+             <h3>Ecommerce</h3>
+            </Link>
             <div className="search-bar">
-                <input type="search" name="search" id="search" placeholder='Search for prducts...' />
+                <input type="search" name="search" 
+                id="search"
+                value={search}
+                onChange={(e)=>setSearch(e.target.value)}
+                 placeholder='Search for prducts...' />
 
                 <div className='search-icon'>
-                    <button type='submit'>
+                    <button type='submit' >
                      <i className='bx bx-search'></i>
 
                     </button>
@@ -22,7 +33,7 @@ function Header(){
                     <i className='bx bx-cart'></i>                 
                     </button>
                     <div className='quantity-wrapper'>
-                        <span>0</span>
+                        <p className='span-sount'>{count}</p>
                     </div>
                    </div>
         </div>
