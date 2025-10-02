@@ -24,6 +24,7 @@ const [products ,setProducts] = useState([])
         <Route path='/' element ={<Products products={products} setProducts={setProducts} />} />
         <Route path='/product' element={<AddProduct />} />
         <Route path='/view/:id'  element={<ViewProduct count={count} setCount={setCount}/>}/>
+        
 
        
       </Routes>
