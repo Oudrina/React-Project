@@ -9,24 +9,18 @@ import ViewProduct from './pages/ViewProduct'
 
 function App() {
 const [products ,setProducts] = useState([])
-    const[count,setCount] = useState(1)
+    const [qauntity,setQuantity] = useState( 1)
 
 
 
   return (
     <>
-     <Header count={count}   />
-      <Carts  />
-
-     
-
+     <Header count={qauntity}   />
       <Routes>
         <Route path='/' element ={<Products products={products} setProducts={setProducts} />} />
         <Route path='/product' element={<AddProduct />} />
-        <Route path='/view/:id'  element={<ViewProduct count={count} setCount={setCount}/>}/>
-        
-
-       
+        <Route path='/view/:id'  element={<ViewProduct qauntity={qauntity} setQuantity={setQuantity} />}/>
+        <Route  path='/cart/:id' element={<Carts  qauntity={qauntity} setQuantity={setQuantity} />}/>
       </Routes>
     </>
   )

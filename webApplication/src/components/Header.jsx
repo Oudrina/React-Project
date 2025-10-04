@@ -2,7 +2,7 @@ import './Header.css'
 import 'boxicons/css/boxicons.min.css';
 import { useState } from 'react';
 import { Link } from 'react-router';
-function Header({count}){
+function Header(){
     const [search,setSearch] = useState('')
     console.log(search)
    
@@ -33,7 +33,7 @@ function Header({count}){
                     <i className='bx bx-cart'></i>                 
                     </button>
                     <div className='quantity-wrapper'>
-                        <p className='span-sount'>{count}</p>
+                        <p className='span-sount'>1</p>
                     </div>
                    </div>
         </div>

@@ -1,11 +1,15 @@
 import './Cart.css'
-function Carts(){
+import CartItem from './CartItem'
+function Carts( {qauntity,setQuantity}){
+    console.log(qauntity)
+
      
 
     return (
         <>
-           <div className="sidebar">
-              Hello
+           <div className="sidebar-wrapper">
+            
+            <CartItem  qauntity ={qauntity}  setQuantity={setQuantity}/>         
            </div>
         </>
     )

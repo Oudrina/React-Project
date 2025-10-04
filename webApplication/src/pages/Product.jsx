@@ -1,19 +1,9 @@
-import { useState } from 'react'
 import './Product.css'
 import { Link } from 'react-router-dom';
- function Product( {setCount ,product} ){
+ function Product( {setQuantity ,quantity,product} ){
 
-   const [quantity,setQuantity] = useState(1)
-   console.log(quantity)
 
-      function handleChange(){
-        const qnty = parseInt(quantity) 
-        if(qnty>0){
-          setCount(preCount => preCount + qnty)
-        }
-
-       
-      } 
+      
 
     return(
       <>
@@ -44,13 +34,14 @@ import { Link } from 'react-router-dom';
                 type="number" 
                 name="quantity"
                 id="quantity"
+                placeholder='1'
                 value={quantity}
                 min={1}
-                onChange={(e)=>setQuantity(Number(e.target.value))} 
+                onChange={(e)=>setQuantity(e.target.value)} 
               />
             </div>
             <div className='product-button'>
-              <button onClick={handleChange}>
+              <button >
                 <i className='bx bx-cart'></i>
                 Add to Cart
               </button>

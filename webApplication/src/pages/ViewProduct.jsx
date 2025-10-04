@@ -3,17 +3,14 @@ import './ViewProduct.css'
 import { useParams } from 'react-router'
 import { useState } from 'react'
 import { useEffect } from 'react'
-function ViewProduct ({ count,setCount}){
-    const[quantity,setQuantity] =useState(1)
+function ViewProduct (){
     const {id} = useParams()
-        console.log(id)
     const [productData,setProductData]= useState({}) 
-    console.log(quantity)
+    // console.log(quantity)
 
-     function  handleClick() {
-        if(quantity>0)
-         setCount(count+1)
-    }
+
+        
+    
 
    useEffect(()=>{
      const ViewProductById = async()=>{
@@ -50,15 +47,11 @@ function ViewProduct ({ count,setCount}){
                             <span className='span-price'>$ {productData.price}</span>
                         </div>
                            <div className="product-qauntity">
-                          <span className='span-qty'>Qty: </span>  <input type="number" 
-                          name="price" 
-                          id="price" min={1}
-                          value={quantity}
-                          onChange={(e)=>setQuantity(e.target.value)}
-                          />
+                          <span className='span-qty'>Qty: <input type="number" name="" id=""  min={1} placeholder='1'/> </span>  
+                         
                            </div>
                             <div className='btn'>
-                                <button onClick={handleClick}>
+                                <button >
                                     Add to Cart
                                 </button>
                             </div>
