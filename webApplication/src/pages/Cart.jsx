@@ -1,15 +1,24 @@
 import './Cart.css'
 import CartItem from './CartItem'
-function Carts( {qauntity,setQuantity}){
-    console.log(qauntity)
 
-     
+function Carts( {carts, }){
+
 
     return (
         <>
            <div className="sidebar-wrapper">
-            
-            <CartItem  qauntity ={qauntity}  setQuantity={setQuantity}/>         
+
+            {carts.length > 0 ? carts.map((cart)=>{
+                return(
+            <CartItem key={cart.id} carts={cart}
+              product={cart.product}
+              />  
+
+                )
+            })
+              
+            : <div>Cart is empty</div>
+           }      
            </div>
         </>
     )

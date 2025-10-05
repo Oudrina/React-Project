@@ -1,50 +1,81 @@
-function CartItem({qauntity,setQuantity}){
-    const handleIncrease = ()=>{
-       if(qauntity > 0){
-        setQuantity(qauntity + 1)
-       }
-    
-    }
+import axios from "axios";
+import { useState } from "react";
 
-    
-    const handleDecrease = ()=>{
-       if(qauntity > 1){
-        setQuantity(qauntity - 1)
-       }
-    
-    }
-    return (
-        <>
-        <div className="cart-wrapper">
-                <div className="image">
-                <img src="/images/product6.jpg" alt="Product name" />
-                </div>
-                <div className="product-desc">
-                <div className="header">
-                    Product Name
-                </div>
-                <div className="price">
-                    <p>$ 500</p>
-                    <div className='increaseButton'>
-                  <button className='increase-button'  onClick={handleDecrease}> 
-                    - </button>
+function CartItem({ carts, product }) {
+  const [quantity, setQuantity] = useState(carts.quantity || 1);
 
-                  <span value={qauntity}
-                   onChange={(e)=>setQuantity(e.target.value)}>{qauntity}</span>
-                    <button className='reduce-button' onClick={handleIncrease}>
-                        +</button>
-                    </div>
-                   
-                      <div>
-                    <button className='trash-delete'>
-                        <i className='bx bx-trash'></i>
-                    </button>
-                </div>
-                </div>
-                </div>
-                
+  // Update quantity in backend
+  const updateQuantity = async () => {
+    try {
+      const response = await axios.put(
+        `http://localhost:8080/cart/update/${product.id}`,
+      );
+      response.data
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  };
+
+  const handleIncrease = () => {
+    const newQuantity = quantity + 1;
+    setQuantity(newQuantity);
+    updateQuantity(newQuantity);
+  };
+
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      updateQuantity(newQuantity);
+    }
+  };
+
+  const deleteCartItem = async () => {
+    if (window.confirm("Do you want to delete this item?")) {
+      try {
+        await axios.delete(`http://localhost:8080/remove/${product.id}`);
+      } catch (error) {
+        console.error("Error deleting item:", error);
+      }
+    }
+    window.location.reload()
+  };
+
+  return (
+    <div className="cart-wrapper">
+      <div className="image">
+        <img src="/images/product6.jpg" alt={product.name} />
+      </div>
+
+      <div className="product-desc">
+        <div className="header">{product.name}</div>
+
+        <div className="price">
+          <p>${product.price}</p>
+
+          <div className="increaseButton">
+            <button className="increase-button" onClick={handleDecrease}>
+              -
+            </button>
+
+            <span>{quantity}</span>
+
+            <button className="reduce-button" onClick={handleIncrease}>
+              +
+            </button>
+
+            <div className="subtotal">
+              SubTotal: <span>${carts.subTotal}</span>
             </div>
-        </>
-    )
+          </div>
+
+          <button className="trash-delete" onClick={deleteCartItem}>
+            <i className="bx bx-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default CartItem
+
+export default CartItem;

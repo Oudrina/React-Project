@@ -2,8 +2,10 @@ import './Header.css'
 import 'boxicons/css/boxicons.min.css';
 import { useState } from 'react';
 import { Link } from 'react-router';
-function Header(){
+function Header({carts}){
     const [search,setSearch] = useState('')
+    const totalQuantity = carts?.length ?? 0
+
     console.log(search)
    
 
@@ -21,20 +23,23 @@ function Header(){
                  placeholder='Search for prducts...' />
 
                 <div className='search-icon'>
+                   
                     <button type='submit' >
                      <i className='bx bx-search'></i>
-
                     </button>
                 </div>
             </div>
 
                 <div className="cart-button">
+                     <Link to={"/cart"}>
                      <button type='submit'>
                     <i className='bx bx-cart'></i>                 
                     </button>
                     <div className='quantity-wrapper'>
-                        <p className='span-sount'>1</p>
+                        <p className='span-sount'>{totalQuantity}</p>
                     </div>
+                    </Link>
+
                    </div>
         </div>
         </>

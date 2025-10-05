@@ -2,25 +2,36 @@ import Header from './components/Header'
 import './App.css'
 import {Route, Routes} from 'react-router'
 import Products from './pages/Products'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Carts from './pages/Cart'
 import AddProduct from './pages/AddProduct'
 import ViewProduct from './pages/ViewProduct'
+import axios from 'axios'
 
 function App() {
 const [products ,setProducts] = useState([])
-    const [qauntity,setQuantity] = useState( 1)
+    const [carts, setCarts] = useState([])
 
 
 
+ useEffect(()=>{
+     const getCart = async() => {
+     const response = await axios.get('http://localhost:8080/cart')
+     console.log(response.data);
+     setCarts(response.data)
+       
+      }
+     getCart()
+     
+    },[])
   return (
     <>
-     <Header count={qauntity}   />
+     <Header carts={carts}/>
       <Routes>
-        <Route path='/' element ={<Products products={products} setProducts={setProducts} />} />
-        <Route path='/product' element={<AddProduct />} />
-        <Route path='/view/:id'  element={<ViewProduct qauntity={qauntity} setQuantity={setQuantity} />}/>
-        <Route  path='/cart/:id' element={<Carts  qauntity={qauntity} setQuantity={setQuantity} />}/>
+        <Route path='/' element ={<Products products={products} setProducts={setProducts}   />}/>
+        <Route path='/product' element={<AddProduct />}/>
+        <Route path='/view/:id'  element={<ViewProduct  />}/>
+        <Route  path='/cart' element={<Carts   carts={carts} setCarts={setCarts}/>}/>
       </Routes>
     </>
   )
