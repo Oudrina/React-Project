@@ -40,3 +40,31 @@
 .read-the-docs {
   color: #888;
 }
+
+.title{
+  font-size: 3rem;
+  margin-top: 3em;
+  margin-bottom: 1em;
+  font-weight: 700;
+}
+span{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2em;
+  color:black;
+}
+button{
+  border: none;
+    padding: .6em 3em;
+    color: white;
+    font-weight: 600;
+    background-color:red;
+    border-radius: 3px;
+    margin-top: .8em;
+
+}
+button:nth-child(even){
+  background-color: blue ;
+  margin-left: 1em;
+
+}
