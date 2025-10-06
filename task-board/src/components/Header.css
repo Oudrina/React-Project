@@ -1,0 +1,20 @@
+.nav-bar-header{
+    width: 100%;
+    border-bottom: 2px solid white;
+         padding: .5em;
+    z-index: 10001;
+    background-color:#f5f5e3;
+    position:sticky;
+    border-bottom-width: 3px;
+
+}
+.headers{
+    width: 95%;
+    border: 1px solid white;
+    margin: 0 auto;
+     padding: .5em;
+     border-radius: 5px;
+}
+.headers h4{
+    font-size: 2rem;
+}
