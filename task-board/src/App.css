@@ -1,3 +1,86 @@
+.board-wrapper{
+  width: 95%;
+  margin: 0 auto;
+  margin-top:60px;
+  border: 1px solid gainsboro;
+  min-height: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  padding: 1em;
+  gap: 20px;
+  align-items: center;
+  border-radius: 6px;
+}
 
+.task-card{
+  border: 1px solid ghostwhite;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow:  0px 0px 2px rgba(0,0,0,0.3);
+    height: 120px;
+
+
+}
+
+
+
+.task-card p {
+ font-size: 1.2rem;
+ white-space: nowrap;
+ word-break: break-all;
+
+ 
+}
+
+.deleteButton{
+  border:  none;
+  background-color: red;
+  padding: .3em 1em;
+  color: white;
+  font-weight: 600;
+  margin-top: .5em;
+  border-radius: 4px;
+  outline: none;
+}
+
+.task-search{
+  width: 70%;
+  margin: 0 auto;
+  margin-top:7.7em;
+  display: flex;
+  justify-content: space-between;
+  padding: .5em;
+  border-radius: 2px;
+  border: 1px solid ghostwhite;
+  align-items: center;
+  position: relative;
+}
+.task-search input{
+  flex-grow: 1;
+  outline: none;
+}
+input {
+     padding: .4em;
+     border-radius: 4px;
+     border: 1px solid gainsboro;
+}
+.task-search button{
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 9px;
+width: 50px;
+color: white;
+background-color: rgb(156, 105, 156);
+outline: none;
+border: none;
+padding-top: .3em;
+padding-bottom: .3em;
+}
+.task-search-main{
+  text-align: center;
+  font-size: .8rem;
+  color: red;
+}
 
 
