@@ -1,0 +1,88 @@
+.category-wrapper{
+   max-width: 800px;
+   margin: 0 auto;
+   margin-top: 2em;
+   box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+   padding: 1em;
+   border-radius: 6px;
+   display: block;
+   /* position: relative; */
+   /* background-color: rgba(0,0,0,0.2); */
+}
+.main-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.main-wrapper h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.category-wrapper-main{
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: .6em;
+   
+  
+}
+.category-wrapper-main p{
+     font-weight: 500;
+     font-size: .9rem;
+     color: gray;
+     text-align: left;
+}
+.category{
+   
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: .6em; 
+   align-items: center;
+   align-content: center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+position: relative;
+
+}
+th{
+       border-bottom: 1px solid rgb(199, 195, 195);
+
+}
+td, th {
+  /* border: 1px solid #dddddd; */
+  text-align: left;
+  padding: 8px;
+}
+.category {
+    font-size: .8rem;
+}
+.remove-button button{
+    border:  none;
+    background-color: rgb(238, 199, 199);
+    padding: .3em .6em;
+    border-radius: 6px;
+}
+
+.remove-button i{
+    color: rgb(245, 135, 135);
+}
+.add-category button{
+    font-size: .7rem;
+    margin-bottom: 2em;
+    border:  none;
+    background-color: blue;
+    color: white;
+    padding: .3em 1em;
+    border-radius: 4px;
+    font-weight: 700;
+}
+.remove-button-tag button{
+    border: none;
+    background-color: white;
+      padding: .3em .6em;
+    border-radius: 6px;
+    background-color: aliceblue;
+
+
+}
