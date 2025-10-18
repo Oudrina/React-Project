@@ -1,10 +1,25 @@
 import React, { useState } from 'react'
+import { useAuth } from '../../Hooks/UseAuth'
+
 import './Login.css'
 function Login({showClose}) {
     const[username,setUsername] = useState('')
     const[password,setPassword]= useState('')
     const[validation,setValidation]=useState(false)
+    const {login} = useAuth()
     console.log({username,password})
+
+    const submitForm = async(e)=>{
+       e.preventDefault()
+
+       try {
+         await login(username,password);
+         
+       } catch (error) {
+         console.log(error)
+       }
+    }
+
   return (
     <>
   
@@ -23,7 +38,7 @@ function Login({showClose}) {
 
                 </div>
             </div>
-            <form  method="post">
+            <form  method="post" onSubmit={submitForm}>
               
                 <input type="text"name='username'  
                 placeholder='Enter your username'

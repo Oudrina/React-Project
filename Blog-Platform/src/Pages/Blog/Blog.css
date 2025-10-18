@@ -1,0 +1,127 @@
+.main-wrapper ,.post-wrapper{
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+    border-radius: 7px;
+    border: 1px solid beige;
+    padding: 1em;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+.post-wrapper{
+    display: block;
+}
+.main-wrapper h4{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.post-category-wrapper{
+   display: inline-flex;
+    gap: 40px;
+    align-items: center;
+}
+.post-category-wrapper p{
+    font-weight: 500;
+    font-size: .89rem;
+    color: black;
+}
+.categories-tags{
+    display: flex;
+   
+}
+ .post-all.active{
+    border-bottom: 2px solid blue;
+ }
+.cate-sub-topic{
+    display: inline-flex;
+    gap: 20px;
+    font-size: .8rem;
+    align-items: center;
+ }
+
+ .cate-sub-topic p{
+    color: rgba(12, 12, 12, 0.6);
+ }
+
+
+
+.category-length{
+      font-size: 15px;
+  color: #374151;
+
+}
+.tags-main-wrapper{
+    display: flex;
+    gap: 20px;
+    font-size: .8rem;
+    align-items: center;
+    margin-top: .6em;
+    
+}
+.tags-main-wrapper p{
+         background-color:  rgba(180, 175, 175, 0.1);
+        color: rgb(40, 44, 43);
+        padding: .2em .4em;
+        border-radius: 9px;
+}
+
+ .post-wrapper h4{
+    font-size: 1.1rem;
+    font-weight: 700;
+ }
+
+ .title-post{
+    display: block;
+ }
+ .title-post p{
+    font-size: .7rem;
+    font-weight: 500;
+    color: rgb(181, 181, 182);
+ }
+ 
+ .content{
+    margin-top: .6em;
+     word-break: break-all;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+ }
+ .content-post {
+    color: rgb(77, 76, 76);
+    font-size: .97rem;
+     
+ }
+ 
+ .sub-topic{
+    display: inline-flex;
+    gap: 20px;
+    margin-top: 1em;
+    font-size: .8rem;
+    align-items: center;
+    justify-content: start;
+ }
+ 
+ .category-tag{
+    padding: .1em 1em;
+    border-radius: 7px;
+    background-color: rgba(123, 123, 238, 0.2);
+    color: rgb(123, 123, 238);
+ }
+
+ .tag{
+    padding: .1em 1em;
+    border-radius: 8px;
+    background-color: rgba(216, 213, 213, 0.2);
+ }
+
+ 
+
+
+
+
+
+
+
+
+

@@ -1,11 +1,16 @@
 .main-header{
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  background-color: white;
   align-items: center;
   align-content: center;
-  padding: .7em;
+  padding: 1.3em;
   box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+  position:sticky;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
 }
 .profiles{
   display: flex;
@@ -16,18 +21,60 @@ h5{
   font-weight: 700;
 }
 .Posts , .Categories ,.Tags{
-  font-size: .976rem;
+  font-size: .946rem;
   font-weight: 600;
-  color: black;
+  color: rgb(14, 13, 13);
 }
-.Posts:active{
-  text-decoration: underline;
+.Posts.active{
   color: blue;
 }
-.login button{
+
+.login button ,.draft-post ,.add-post{
   border:  none;
-  background-color: rgb(243, 215, 243);
   padding: .3em 1em;
-  color: white;
   border-radius: 6px;
+  transition: all ease-in .5s;
+  cursor: pointer;
+  font-weight: 600;
 }
+.draft-post{
+ background-color: rgba(198, 222, 233, 0.8);
+ color:  rgba(8, 60, 83, 0.8);
+}
+.draft-post:hover{
+   background-color:rgba(36, 176, 236, 0.8) ;
+   color: white;
+}
+.add-post{
+   background-color: rgba(198, 233, 223, 0.8);
+   color:  rgba(17, 117, 89, 0.8); ;
+}
+
+.add-post:hover{
+   background-color:rgba(36, 196, 150, 0.8) ;
+   color: white;
+}
+
+.login button{
+  background-color: rgb(166, 166, 236);
+  color: white;
+}
+.login button:hover{
+   background-color: rgb(54, 54, 212);
+  color: white;
+}
+
+
+.login-draft-post-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 30px;
+  align-items: center;
+}
+.post-wrapper-auth{
+  display: flex;
+    gap: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+

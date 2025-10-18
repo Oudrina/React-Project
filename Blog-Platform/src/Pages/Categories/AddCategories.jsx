@@ -1,9 +1,12 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useAuth } from '../../Hooks/UseAuth'
 
 function AddCategories({closeCategory}) {
     const[name,setName] = useState('')
     const[valid,setValid] = useState(false)
+    const {token} =useAuth()
+    console.log("my tokrn is" ,token)
     console.log(name)
     const handleForm = (e )=>{
      e.preventDefault()
@@ -11,9 +14,13 @@ function AddCategories({closeCategory}) {
     }
 
     const submitForm = async()=>{
-        const formData = name
+        const formData = {name}
        try {
-        const response = await axios.post('http://localhost:8080/api/v1/categories', formData,{headers:{'Content-Type':'application/json'}})
+        const response = await axios.post('http://localhost:8080/api/v1/categories', formData,{headers:
+            {'Content-Type':'application/json',
+                'Authorization':`Bearer ${token}`
+            
+            }})
          console.log(response.data)
           setName('')
          if(response.status === 201)
@@ -30,7 +37,7 @@ function AddCategories({closeCategory}) {
             <div className="header">
                 <h3>Categories</h3>
                 <div className="close-btn"  onClick={()=>closeCategory(false)}>
-                    <i class='bx bx-x'></i>
+                    <i className='bx bx-x'></i>
                 </div>
             </div>
 

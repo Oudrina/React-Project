@@ -1,11 +1,14 @@
 import { Link } from 'react-router'
 import Category from './Category'
 import './Categories.css'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
-import AddCategories from './AddCategories'
- function Categories({showCategory}) {
+import axios from 'axios'
+import { useAuth } from '../../Hooks/UseAuth'
+
+
+function Categories({showCategory}) {
   const[categories,setCategories] = useState([])
+  const {isAuthenticated} = useAuth()
 
      useEffect(()=>{
        const getCategories = async ()=>{
@@ -29,12 +32,17 @@ import AddCategories from './AddCategories'
       <div className="main-wrapper">
        <h3>Categories</h3>
 
-      <div className="add-category">
+
+       {isAuthenticated &&
+        <div className="add-category">
        <button onClick={()=>showCategory(true)}>
         add Categories
        </button>
       </div>
-     
+  
+       }
+
+      
 
       </div>
 

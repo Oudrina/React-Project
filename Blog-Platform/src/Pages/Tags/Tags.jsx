@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react'
 import Tag from './Tag'
 import AddTags from './AddTags'
 import axios from 'axios'
+import { useAuth } from '../../Hooks/UseAuth'
+     
 
  function Tags({setAddModal}) {
    const[tags,setTags] = useState([])
+   const{isAuthenticated} = useAuth()
 
      useEffect(()=>{
        const getCategories = async ()=>{
@@ -24,12 +27,16 @@ import axios from 'axios'
 < div   className='category-wrapper'>
       <div className="main-wrapper">
        <h3>Tags</h3>
-      <div className="add-category"> 
+       
+       {isAuthenticated&&
+       
+       <div className="add-category"> 
        <button onClick={()=>setAddModal(true)}>
         add tags
        </button>
       </div>
-     
+      }
+      
       </div>
 
 

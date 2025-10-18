@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router'
-import Login from '../Pages/Login/login'
+import { Link, NavLink,} from 'react-router'
+import { useAuth } from '../Hooks/UseAuth'
+
 
  function Header({show}) {
+    const{logout ,isAuthenticated} = useAuth()
+   
   return (
     <>
         <div className='main-header'>
@@ -10,11 +13,12 @@ import Login from '../Pages/Login/login'
                 <h5>Blog Platform</h5>
                 </Link>
                 <div className="profiles">
-                    <Link to={"/"}>
+
+                    <NavLink to={"/"} end>
                       <div className="Posts">
-                        Post
+                       Home
                     </div>
-                    </Link>
+                    </NavLink>
                   
 
                           <Link to={"/categories"}>
@@ -33,14 +37,41 @@ import Login from '../Pages/Login/login'
 
 
                 </div>
-                  <Link to={"/login"}>
+
+                <div className="login-draft-post-wrapper">
+                {isAuthenticated &&
+                <div className="post-wrapper-auth">
+
+                   <div className="draft-post">
+                    Drafts
+                   </div>
+
+                    <div className="add-post">
+                    New Posts
+                   </div>
+                </div>
+               }
+
+                {isAuthenticated?
+                  (
+                    <div className='login'>
+                <button onClick={logout}>
+                    Logout
+                </button>
+              </div>
+                  )
+                :(
+                      
               <div className='login'>
                 <button onClick={()=>show(true)}>
                     Login
                 </button>
+
               </div>
-              </Link>
+          
+                )}
                
+               </div>
 
                
             </div>
