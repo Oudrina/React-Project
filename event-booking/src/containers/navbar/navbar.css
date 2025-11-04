@@ -1,0 +1,189 @@
+.app__navbar__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: #212121;
+    padding: .4em 1em;
+    width: 100%;
+    z-index: 10001;
+    position: fixed;
+    top: 0;
+}
+.app__navbar__heading{
+    font-size: 1.2rem;
+    color: white;
+    line-height: 45px;
+    letter-spacing: 0.05em;
+}
+.app__navbar__links {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+   
+}
+
+.app__navbar__links ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+   
+}
+.app__navbar__links li{
+    margin:  0 1em;
+    font-size: 15px;
+}
+.app__navbar__links a{
+    color:  lightblue;
+    cursor: pointer;
+}
+.app__navbar__links a:hover {
+    color: white;
+    transform:  0.5s ease;
+}
+.app__navbar__signin{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    /* margin:  0 2rem; */
+}
+
+.app__navbar__event-book{
+    color: white;
+    font-size: .89rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.app__navbar-dot{
+    border: 1px solid white;
+    height: 20px;
+     margin-right: 1rem;
+
+}
+.app__navbar__signin-button{
+    border: none;
+    outline:  none;
+    font-size: .85rem;
+    background-color: rgb(100, 149, 237);
+    padding: .2rem 1.3rem;
+    text-align:  center;
+    display: flex;
+    align-items: center;
+
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: 0px  0px  4px rgba(0,0,0,0.8);
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.5s ease;
+
+}
+.app__navbar__signin-button:hover{
+    color: white;
+    background-color :rgb(100, 149, 237,0.5);
+}
+.navbar__sidebar_menu_links{
+   position: absolute;
+   top: 40px;
+   right: 30px;
+    background-color: #333;
+    border-radius: 6px;
+
+    width: 200px;
+    height: 300px;
+
+   display:  flex;
+   text-align:  center;
+   justify-content: center;
+
+  
+}
+.navbar__sidebar_menu-togglebutton{
+    display: none;
+}
+.navbar__sidebar_menu_links  ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-size: .8rem;
+    margin-top: 3rem;
+
+}
+.navbar__sidebar_menu_links   li{
+    margin:  1rem 0;
+    font-size: 15px;
+}
+.navbar__sidebar_menu_links a{
+    color:  lightblue;
+    cursor: pointer;
+}
+
+.app__navbar__signin__menu-button{
+    padding: .3em 1.2rem;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: .7rem;
+    outline: none;
+    border: none;
+    color: white;
+        background-color: rgb(100, 149, 237);
+   transition: 0.5s ease;
+   cursor: pointer;
+}
+  .app__navbar__signin__menu-button:hover{
+   transform: translateY(0.5);
+  }
+
+@media screen and (max-width:768px) {
+    
+    .app__navbar__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color: brown;
+    padding: 0 1rem;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar__sidebar_menu-togglebutton{
+    display: flex;
+}
+.app__navbar__links ul{
+    display: none;
+   
+}
+
+.app__navbar__signin__wrapper{
+    display: none;
+}
+}
+
+
+@media screen and (max-width:480px) {
+    
+    .app__navbar__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    background-color:orange;
+    padding: 0 1rem;
+    width: 100%;
+    position: fixed;
+}
+.app__navbar__signin__wrapper{
+  display:  none;
+}
+.app__navbar__heading{
+    font-size: .8rem;
+}
+.navbar__sidebar_menu_links{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+
+}

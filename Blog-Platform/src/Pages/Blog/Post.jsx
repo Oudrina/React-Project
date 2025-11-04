@@ -1,26 +1,38 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router'
 
-function Post() {
+function Post({post}) {
+        const navigate = useNavigate()
+
+  const viewDetails=(id)=>{
+  navigate("/post/" +id)
+  }
   return (
-    <div className='post-wrapper'>
+    <div className='post-wrapper' onClick={()=>viewDetails(post.id)}>
 
       <div className="title-post">
-        <h4>Spaghetti:A love Letter </h4>
-           <p>by System Adminstrator</p>
+        <h5>{post.title} </h5>
+           <p>{post.author?.username}</p>
       </div>
        
       <div className="content"> 
-      <a href='' className='content-post'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat a reiciendis nobis quae odit, enim rerum, et eius hic qui odio vitae dignissimos quia ab minus facere quasi nostrum error!.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nam atque sapiente consectetur impedit sit dicta dolor enim quaerat, facilis maiores id natus culpa sed ipsam deleniti eum non accusantium.
-      </a>
+      < p className='content-post'  >
+      {post.content.slice(0,180)}...
+      </p>
      </div> 
 
     <div className="sub-topic">
      
-      <p className='post-date'>December 25,2025</p>
-      <p className='reding-topic'> 2 min read</p>
-      <p className='category-tag'> Technology</p>
-      <p className='tag'> Food</p>
+      <p className='post-date'>{post.createdAt}</p>
+      <p className='reding-topic'>{post.readingTime} min read</p>
+      <p className='category-tag'> {post.category.name}</p>
+              {post.tags.map((tag)=>{
+                return(
+           <p className='tag'> {tag.name}</p>
+
+                )
+              })}
+      
 
 
     </div>

@@ -1,0 +1,124 @@
+.view-form-div-wrapper{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 2em;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    padding: 1em;
+    border-radius: 6px;
+}
+.header{
+    margin-bottom: .9em;
+}
+ .input-form h5{
+     font-size: 1.1rem;
+       text-transform: capitalize;
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #374151;
+     
+}
+
+.header button{
+    border: none;
+    padding: .3em .6em;
+    border-radius: 5px;
+    color: gray;
+}
+.share-edit-delete{
+    display: inline-flex;
+    gap: 20px;
+}
+.header button:nth-child(2){
+    background-color: rgba(219, 60, 60,0.2);
+    color: rgb(226, 116, 116);
+        transition: all ease-in-out .7s;
+
+}
+.header button:nth-child(2):hover{
+    background-color:rgba(219, 60, 60); ;
+    color: white;
+}
+.share-edit-delete button{
+    background-color: rgb(0, 204, 255,0.2);
+    color: rgb(90, 155, 152);
+    transition: all ease-in .3s;
+}
+.share-edit-delete button:hover{
+    background-color: rgb(0, 204, 255);
+    color:white;
+    transition: all ease-in .3s;
+}
+.input-form{
+    border-bottom: 1px solid grey;
+    padding-bottom: .6em;
+}
+.input-form .title{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.sub-title{
+    display: inline-flex;
+    gap: 10px;
+    font-size: .798rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    margin-top: .2em;
+}
+.sub-content p{
+
+    width: 500px;
+    margin: 0 auto;
+   margin-top: 1em;
+word-break: break-all;
+font-size: .9rem;
+font-weight: 600;
+color: rgb(73, 73, 73);
+
+}
+.category-div{
+     margin-top: .5em;
+     margin-bottom: .5em;
+     margin-left: 2.5em;
+     font-size: .8rem;
+}
+.cate{
+ color: rgb(71, 129, 129);
+}     
+
+.Tags-div{
+    display: inline-flex;
+    gap: 10px;
+     margin-left: 2em;
+
+}
+.Tags-div p{
+    background-color: rgb(231, 227, 227,0.7);
+    padding: .1em .5em;
+    border-radius: 4px;
+    color: rgb(156, 155, 155);
+    font-size: .8rem;
+
+}
+/* Eidt post css */
+.input input{
+    width: 100%;
+    outline: none;
+    border: 1px solid gainsboro;
+    padding: .4em;
+    border-radius: 6px;
+}
+.post-edit p{
+    font-size: 1.2rem;
+    margin: .8em;
+    font-weight: 600;
+
+}
+.form-div-wrapper-main{
+    max-width: 500px;
+    margin: 0 auto;
+     box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+     padding: 1em;
+    border-radius: 10px;
+    margin-top: 1.5em;
+
+}

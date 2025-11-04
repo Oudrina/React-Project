@@ -1,0 +1,182 @@
+.app__eventpage__container{
+    width: 100%;
+    display:  flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.eventpage__page__wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    margin-top: 6rem;
+
+
+}
+.app__eventPage__search__input{
+    width: 70%;
+    display: flex;
+       margin-left: 5em; 
+
+
+
+    
+}
+.app__eventPage__search__input input{
+    flex: 1;
+    outline: none;
+    border: none;
+    padding: .4em .3em ;
+    border:  none;
+    border: 1px solid gainsboro;
+    border-radius: 2px;
+
+}
+.app__eventpage__search_button button{
+    height: 100%;
+    padding: 0 1em;
+    background: none;
+    font-size: .9rem;
+    font-weight: 400;
+    outline: none;
+
+     border: 1px solid gainsboro;
+     color: white;
+     cursor: pointer;
+     background-color:  black;
+
+}
+.app__eventpage__main__content{
+    width: 100%;
+        margin-top: 3rem;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        flex-direction: row;
+        margin-bottom: 3rem;
+
+}
+.events__event__category__section{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex: 1;
+}
+.events__category__section{
+    /* max-width: 250px; */
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+    padding: .5em;
+    border-radius: 5px;
+    border:  1px solid rgb(213, 209, 209);
+
+      margin-right: 3em;
+}
+.events__categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin : .3em 0;
+    width: 100%;
+
+}
+.events__categories p{
+    font-size: .89rem;
+    margin: .3em 0;
+    color: rgb(93, 94, 94);
+    cursor: pointer;
+    font-weight: 500;
+}
+.app__eventPage__search__category {
+    width: 100%;
+}
+.app__eventPage__search__category input{
+    flex: 1;
+    border: none;
+        padding: .3em 1em;
+        border: 1px solid gainsboro;
+        outline: none;
+        width: 100%;
+        position: relative;
+
+}
+.search__error{
+    position:absolute;
+   margin-top: 2.5em;
+   font-size: .8rem;
+   color: red;
+   font-weight: 500;
+   
+}
+
+/* Media Queries */
+@media screen  and (max-width:1024px){
+
+}
+
+@media screen  and (max-width:768px){
+  .app__eventpage__main__content {
+    flex-direction: column-reverse;
+}
+
+.events__category__section{
+    flex-direction: row;
+    border: 0;
+    width: 100%;
+}
+.app__eventPage__search__category{
+    display :none;
+}
+.events__categories{
+ width: 100%;
+ flex-direction: row;
+ justify-content: space-between;
+     flex-wrap: wrap;
+
+}
+
+.events__categories p{
+    border: 1px solid gainsboro;
+    padding: .2em 1em;
+    border-radius: 8px;
+
+}
+}
+
+@media screen  and (max-width:480px){
+   
+.app__eventpage__main__content {
+    flex-direction: column-reverse;
+}
+.events__category__section{
+    flex-direction: row;
+    border: 0;
+}
+
+.app__eventPage__search__category{
+    display :none;
+}
+.events__categories{
+    flex-direction: row;
+justify-content: space-between;  
+  width: 100%;
+    flex-wrap: wrap;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+        gap: 5px;
+
+}
+.events__categories p{
+    border: 1px solid gainsboro;
+    padding: .3em 1em;
+    border-radius: 8px;
+}
+}

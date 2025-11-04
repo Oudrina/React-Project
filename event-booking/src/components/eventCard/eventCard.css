@@ -1,0 +1,80 @@
+.app__eventCard__container{
+    display: flex;
+    justify-content: flex-start;
+    padding: .6em;
+    flex-direction: column;
+    margin: 0 1rem;
+}
+.app__eventCard__container:hover{
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    transform: translateY(-20px);
+    opacity: 0.6;
+}
+.app__eventCard__container img{
+    width: 100%;
+    max-width: 230px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.app__eventCard__headng-category{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: .4em;
+
+
+}
+.app__eventCard__headng-category h4{
+    flex: 1;
+    font-size: .9rem;
+    font-weight: 800;
+    color: #333;
+}
+.eventCard__category{
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid;
+    font-size: .8rem;
+    background-color: rgb(89, 57, 57);
+    color: white;
+    font-weight: 500;
+    padding: .2em .6em;
+    border-radius: 4px;
+
+}
+.app__eventCard__info p{
+    font-size: .8rem;
+    font-weight: 500;
+    color: grey;
+    margin: .5rem 0;
+}
+.eventCard-button button{
+    border: none;
+    outline: none;
+    padding: .4em 1.2rem;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen  and (max-width:1024px){
+    
+}
+
+@media screen  and (max-width:768px){
+   
+
+}
+
+@media screen  and (max-width:480px){
+.app__eventCard__container img{
+    min-width: 300px;
+}
+
+
+}

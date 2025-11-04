@@ -41,14 +41,18 @@ import { useAuth } from '../Hooks/UseAuth'
                 <div className="login-draft-post-wrapper">
                 {isAuthenticated &&
                 <div className="post-wrapper-auth">
-
+                 <Link to={"/drafts"}>
                    <div className="draft-post">
                     Drafts
                    </div>
-
-                    <div className="add-post">
-                    New Posts
-                   </div>
+                   </Link>
+                   
+                     <Link to={"/newPost"}>
+                       <div className="add-post">
+                       New Posts
+                     </div>
+                     </Link>
+                  
                 </div>
                }
 
@@ -61,14 +65,15 @@ import { useAuth } from '../Hooks/UseAuth'
               </div>
                   )
                 :(
-                      
+                    
+                  <Link to={"/login"}>
               <div className='login'>
                 <button onClick={()=>show(true)}>
                     Login
                 </button>
 
               </div>
-          
+            </Link>
                 )}
                
                </div>

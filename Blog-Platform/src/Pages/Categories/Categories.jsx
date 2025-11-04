@@ -1,22 +1,22 @@
 import { Link } from 'react-router'
 import Category from './Category'
 import './Categories.css'
+
+import { useAuth } from '../../Hooks/UseAuth'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useAuth } from '../../Hooks/UseAuth'
 
 
-function Categories({showCategory}) {
-  const[categories,setCategories] = useState([])
+function Categories({showCategory } ) {
   const {isAuthenticated} = useAuth()
+ const[categories,setCategories] = useState([])
 
-     useEffect(()=>{
+   useEffect(()=>{
        const getCategories = async ()=>{
         try {
               const response = await axios.get('http://localhost:8080/api/v1/categories')
           console.log(response.data)
-          setCategories(response.data)
-          
+         setCategories(response.data)
         } catch (error) {
           console.error("network error",error)
         }
@@ -29,7 +29,7 @@ function Categories({showCategory}) {
  
   return (
     < div   className='category-wrapper'>
-      <div className="main-wrapper">
+      <div className="main-wrapper-category">
        <h3>Categories</h3>
 
 
@@ -55,14 +55,13 @@ function Categories({showCategory}) {
                 <th>Action</th>
                 </tr>
 
-                  {categories.length >0 ?(
-                categories.map((cate)=>{
+                  {categories &&(
+                 categories.map((cate)=>{
                   return(
                   <Category key={cate.id}  category={cate}/>
                   )
                 })
-          ):(
-          <div> No Category available</div>)}  
+          )}
                           
        
                  </table>

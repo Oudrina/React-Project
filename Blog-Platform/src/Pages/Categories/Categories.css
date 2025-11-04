@@ -6,8 +6,7 @@
    padding: 1em;
    border-radius: 6px;
    display: block;
-   /* position: relative; */
-   /* background-color: rgba(0,0,0,0.2); */
+ 
 }
 .main-wrapper{
     display: flex;
@@ -86,3 +85,12 @@ td, th {
 
 
 }
+ .main-wrapper-category{
+display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+ }
+ 

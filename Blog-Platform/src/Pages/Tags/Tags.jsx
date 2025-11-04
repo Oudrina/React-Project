@@ -10,7 +10,7 @@ import { useAuth } from '../../Hooks/UseAuth'
    const{isAuthenticated} = useAuth()
 
      useEffect(()=>{
-       const getCategories = async ()=>{
+       const getTags = async ()=>{
         try {
               const response = await axios.get('http://localhost:8080/api/v1/tags')
           console.log(response.data)
@@ -21,11 +21,11 @@ import { useAuth } from '../../Hooks/UseAuth'
 
       }
    
-      getCategories()
+      getTags()
      },[])
   return (
 < div   className='category-wrapper'>
-      <div className="main-wrapper">
+      <div className="main-wrapper-tags">
        <h3>Tags</h3>
        
        {isAuthenticated&&
