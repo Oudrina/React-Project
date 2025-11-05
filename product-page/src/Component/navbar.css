@@ -1,0 +1,15 @@
+.navbar__wrapper{
+    width: 100%;
+    background-color: black;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    color: white;
+}
+.navber__cart{
+    display: flex;
+    gap: 10px;
+    color: white;
+}
